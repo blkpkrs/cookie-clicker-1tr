@@ -1,14 +1,19 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
+// import reactLogo from './assets/react.svg'
+// import viteLogo from './assets/vite.svg'
+// import heroImg from './assets/hero.png'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [rotation, setRotation] = useState(0)
+
+  function handleClick() {
+    setRotation(rotation + 36)
+  }
 
   return (
-    <>
+    <div className="layout">
+      {/*
       <section id="center">
         <div className="hero">
           <img src={heroImg} className="base" width="170" height="179" alt="" />
@@ -115,7 +120,17 @@ function App() {
 
       <div className="ticks"></div>
       <section id="spacer"></section>
-    </>
+      */}
+
+      {/* dynamic element */}
+      <button
+        className="cookie-button"
+        onClick={handleClick}
+        style={{ transform: `translate(-50%, -50%) rotate(${rotation}deg)` }}
+      >
+        🍪
+      </button>
+    </div>
   )
 }
 
