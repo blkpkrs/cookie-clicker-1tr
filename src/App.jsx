@@ -6,10 +6,14 @@ import './App.css'
 
 function App() {
   const [rotation, setRotation] = useState(0)
+  const [cookieCount, setCookieCount] = useState(0)
 
   function handleClick() {
+    setCookieCount(cookieCount + cookiesPerClick)
     setRotation(rotation + 36)
   }
+
+  const cookiesPerClick = 1
 
   return (
     <div className="layout">
@@ -130,6 +134,11 @@ function App() {
       >
         🍪
       </button>
+      {/* Cookie Counter */}
+      <div className="cookie-counter">
+        <div>Cookies: {cookieCount}</div>
+        <div>Per Click: {cookiesPerClick}</div>
+      </div>
     </div>
   )
 }
