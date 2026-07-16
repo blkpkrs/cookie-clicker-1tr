@@ -4,12 +4,13 @@
   align-items: center;
   height: 100vh;
   width: 100vw;
+  background-color:peru
 }
 
 .cookie-counter {
   position: absolute;
   bottom: 20px;
-  left: 20px;
+  left: 80px;
   color: #fff;
   font-size: 16px;
   font-family: sans-serif;
@@ -25,4 +26,28 @@
   transform: translate(-50%, -50%);
   transition: transform 0.1s ease;
   user-select: none;
+}
+.title {
+  position: fixed;
+  top:20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 40px;
+  margin: 0;
+}
+.reset-button {
+  position: fixed;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 24px;
+  font-size: 16px;
+  cursor:pointer;
+}
+.click-feedback {
+  position: absolute;
+  font-size:28px;
+  font-weight: bold;
+  color: white;
+  transform: translate(70px, -80px);
 }

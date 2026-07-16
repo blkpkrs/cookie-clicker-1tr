@@ -7,16 +7,27 @@ import './App.css'
 function App() {
   const [rotation, setRotation] = useState(0)
   const [cookieCount, setCookieCount] = useState(0)
+  const [showFeedback, setShowFeedback]
+  = useState(false)
 
   function handleClick() {
     setCookieCount(cookieCount + cookiesPerClick)
     setRotation(rotation + 36)
-  }
+    setShowFeedback(true)
 
+    setTimeout(() =>{
+      setShowFeedback(false)
+  }, 500)
+  }
+  function handleReset() {
+    setCookieCount(0)
+    setRotation(0)
+  }
   const cookiesPerClick = 1
 
   return (
     <div className="layout">
+      <h1 className="title">Cookie Clicker</h1>
       {/*
       <section id="center">
         <div className="hero">
@@ -134,12 +145,23 @@ function App() {
       >
         🍪
       </button>
+      {showFeedback && (
+        <div className="click-feedback">+{cookiesPerClick}</div>
+      )}
       {/* Cookie Counter */}
       <div className="cookie-counter">
         <div>Cookies: {cookieCount}</div>
         <div>Per Click: {cookiesPerClick}</div>
       </div>
+      <button
+        type="button"
+        className="reset-button"
+        onClick={handleReset}
+        >
+          Reset
+          </button>
     </div>
+  
   )
 }
 
