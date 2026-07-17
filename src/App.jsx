@@ -1,23 +1,26 @@
+import gingerbreadMan from "./assets/33.png";
+import './App.css'
+
 import { useState } from 'react'
 // import reactLogo from './assets/react.svg'
 // import viteLogo from './assets/vite.svg'
 // import heroImg from './assets/hero.png'
-import './App.css'
+
 
 function App() {
   const [rotation, setRotation] = useState(0)
   const [cookieCount, setCookieCount] = useState(0)
   const [showFeedback, setShowFeedback]
-  = useState(false)
+    = useState(false)
 
   function handleClick() {
     setCookieCount(cookieCount + cookiesPerClick)
     setRotation(rotation + 36)
     setShowFeedback(true)
 
-    setTimeout(() =>{
+    setTimeout(() => {
       setShowFeedback(false)
-  }, 500)
+    }, 500)
   }
   function handleReset() {
     setCookieCount(0)
@@ -27,6 +30,22 @@ function App() {
 
   return (
     <div className="layout">
+      {/*left dancing gingerbread man*/}
+      <div className="gingerbread gingerbread-left">
+        <img
+          src={gingerbreadMan}
+          alt="Dancing gingerbread man"
+        />
+      </div>
+
+      <div className="gingerbread gingerbread-right">
+        <div className="flip-gingerbread">
+          <img
+            src={gingerbreadMan}
+            alt="Dancing gingerbread man"
+          />
+        </div>
+      </div>
       <h1 className="title">Cookie Clicker</h1>
       {/*
       <section id="center">
@@ -157,11 +176,11 @@ function App() {
         type="button"
         className="reset-button"
         onClick={handleReset}
-        >
-          Reset
-          </button>
+      >
+        Reset
+      </button>
     </div>
-  
+
   )
 }
 

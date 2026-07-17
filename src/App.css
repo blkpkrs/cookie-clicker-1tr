@@ -1,53 +1,150 @@
 .layout {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   width: 100vw;
-  background-color:peru
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: rgb(203, 126, 11);
 }
 
 .cookie-counter {
-  position: absolute;
+  position: fixed;
   bottom: 20px;
-  left: 80px;
+  left: 50px;
   color: #fff;
   font-size: 16px;
   font-family: sans-serif;
 }
 
 .cookie-button {
-  position: absolute;
+
+  position: static;
+
   background: transparent;
   border: none;
   cursor: pointer;
-  font-size: 120px;
+  font-size: 150px;
   line-height: 1;
-  transform: translate(-50%, -50%);
+
   transition: transform 0.1s ease;
   user-select: none;
+
+  margin: 0;
+  padding: 0;
 }
+
 .title {
-  position: fixed;
-  top:20px;
-  left: 50%;
+  position: absolute;
+  top: 50px;
+  left: 45%;
   transform: translateX(-50%);
   font-size: 40px;
   margin: 0;
 }
+
 .reset-button {
-  position: fixed;
+  position: absolute;
   bottom: 25px;
-  left: 50%;
+  left: 45%;
   transform: translateX(-50%);
-  padding: 10px 24px;
+  padding: 10px 20px;
   font-size: 16px;
-  cursor:pointer;
+  cursor: pointer;
 }
+
 .click-feedback {
   position: absolute;
-  font-size:28px;
+  font-size: 28px;
   font-weight: bold;
   color: white;
   transform: translate(70px, -80px);
+}
+
+/*This fuction is used to make sure every elemnts at the center */
+.app {
+  width: 100%;
+  min-height: 100vh;
+
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+
+  justify-items: center;
+
+  padding: 10px 20px 30px;
+  background-color: #d18ae3;
+
+}
+
+.cookie-area {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stats {
+  position: absolute;
+  left: 30px;
+  bottom: 30px;
+
+  color: white;
+  text-align: left;
+
+}
+
+/* gingerbreadman */
+.gingerbread {
+  position: absolute;
+  top: 42%;
+  width: 140px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.gingerbread-left {
+  left: 100px;
+}
+
+.gingerbread-right {
+  right: 250px;
+}
+
+.gingerbread img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transform-origin: center bottom;
+  animation: gingerbreadDance 1.6s ease-in-out infinite;
+}
+
+.flip-gingerbread {
+  transform: scaleX(-1);
+}
+
+.gingerbread-right img {
+  animation-delay: -0.5s;
+}
+
+@keyframes gingerbreadDance {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(-8deg);
+  }
+
+  25% {
+    transform: translateY(-50px) rotate(8deg);
+  }
+
+  50% {
+    transform: translateY(0) rotate(8deg);
+  }
+
+  75% {
+    transform: translateY(0) rotate(-8deg);
+  }
 }
