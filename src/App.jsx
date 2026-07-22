@@ -42,20 +42,20 @@ function App() {
         setName('Cookie Clicker')
       }
       else if (num == 2) {
-       setCookieIcon('🥠')
-       setName('Cookie Clicker')
+        setCookieIcon('🥠')
+        setName('Cookie Clicker')
      }
       else if (num == 3) {
-       setCookieIcon('🍩')
-       setName('Donut Clicker')
+        setCookieIcon('🍩')
+        setName('Donut Clicker')
      }
-     else if (num == 4) {
-      setCookieIcon('🧁')
-      setName('Cupcake Clicker')
+      else if (num == 4) {
+        setCookieIcon('🧁')
+        setName('Cupcake Clicker')
      }
-     else if (num == 5) {
-      setCookieIcon('🍬')
-      setName('Candy Clicker')
+      else if (num == 5) {
+        setCookieIcon('🍬')
+        setName('Candy Clicker')
      }
   }
 
