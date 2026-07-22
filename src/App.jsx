@@ -12,6 +12,10 @@ function App() {
   const [cookieCount, setCookieCount] = useState(0)
   const [showFeedback, setShowFeedback]
     = useState(false)
+  const [cookieIcon, setCookieIcon] = useState('🍪')
+  const [num, setNum] = useState(0)
+  const [name, setName] = useState('Cookie Clicker')
+  
 
   function handleClick() {
     setCookieCount(cookieCount + cookiesPerClick)
@@ -26,6 +30,35 @@ function App() {
     setCookieCount(0)
     setRotation(0)
   }
+
+  function randomNumberInRange(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min
+  }
+
+  function cookieSwap() {
+    setNum(randomNumberInRange(1, 5))
+      if (num == 1) {
+        setCookieIcon('🍪')
+        setName('Cookie Clicker')
+      }
+      else if (num == 2) {
+       setCookieIcon('🥠')
+       setName('Cookie Clicker')
+     }
+      else if (num == 3) {
+       setCookieIcon('🍩')
+       setName('Donut Clicker')
+     }
+     else if (num == 4) {
+      setCookieIcon('🧁')
+      setName('Cupcake Clicker')
+     }
+     else if (num == 5) {
+      setCookieIcon('🍬')
+      setName('Candy Clicker')
+     }
+  }
+
   const cookiesPerClick = 1
 
   return (
@@ -46,7 +79,7 @@ function App() {
           />
         </div>
       </div>
-      <h1 className="title">Cookie Clicker</h1>
+      <h1 className="title">{name}</h1>
       {/*
       <section id="center">
         <div className="hero">
@@ -159,10 +192,10 @@ function App() {
       {/* dynamic element */}
       <button
         className="cookie-button"
-        onClick={handleClick}
+        onClick={() => {handleClick(); cookieSwap()}}
         style={{ transform: `translate(-50%, -50%) rotate(${rotation}deg)` }}
       >
-        🍪
+        {cookieIcon}
       </button>
       {showFeedback && (
         <div className="click-feedback">+{cookiesPerClick}</div>
