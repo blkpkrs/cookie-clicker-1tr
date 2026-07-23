@@ -1,16 +1,25 @@
-# React + Vite
+# Cookie Clicker App
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A dynamic web app built with React and JavaScript for the UCLA Engineering 1TR React Project.
 
-Currently, two official plugins are available:
+## Groupmates
+- Blake Pokras
+- Yicong Qiu
+- Rose Perez
+- Chris Penick
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Each group member contributed to the project via GitHub.
 
-## React Compiler
+## About the App
+This app is an interactive clicker game centered around an emoji displayed in the middle of the page (default: a cookie).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**How it works:**
+- Clicking the emoji increases the score counter.
+- Periodically, the emoji rotates.
+- While rotating, there's a random chance the emoji changes to a different one (e.g., a piece of candy or a doughnut) instead of staying a cookie.
+- A **Reset** button resets the score back to zero.
+- The page includes decorations, including a gingerbread man GIF.
 
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Tech Stack
+- React
+- JavaScript
